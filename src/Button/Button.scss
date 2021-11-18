@@ -1,0 +1,13 @@
+:root {
+  --button-padding--default: 8px 6px;
+  --button-margin--default: 0 8px;
+  --button-background-color: #678983;
+}
+
+button {
+  font-size: var(--font-size--default);
+  padding: var(--button-padding--default);
+  margin: var(--button-margin--default);
+  background-color: var(--button-background-color);
+  color: var(--color--default);
+}

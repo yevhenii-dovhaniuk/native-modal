@@ -1,0 +1,11 @@
+@import './Button/Button';
+@import './Header/Header';
+@import './Main/Main';
+
+:root {
+  --font-size--default: 14px;
+
+  --color--default: #181D31;
+
+  --margin--medium: 14px;
+}
