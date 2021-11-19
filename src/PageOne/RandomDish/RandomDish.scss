@@ -1,0 +1,17 @@
+.random-dish {
+  .dish-data {
+
+    &__entry {
+      display: flex;
+    }
+
+    &__key {
+      margin-right: var(--margin--medium);
+
+      &:after {
+        content: ':'
+      }
+    }
+  }
+}
+

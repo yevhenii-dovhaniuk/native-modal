@@ -1,13 +1,21 @@
 :root {
   --button-padding--default: 8px 6px;
   --button-margin--default: 0 8px;
-  --button-background-color: #678983;
+  --button-background-color: #F0E9D2;
+  --button-border-color: #E6DDC4;
 }
 
 button {
   font-size: var(--font-size--default);
   padding: var(--button-padding--default);
-  margin: var(--button-margin--default);
   background-color: var(--button-background-color);
   color: var(--color--default);
+
+  border-radius: 5px;
+  border: 1px solid var(--button-background-color);
+
+  &:hover {
+    border: 1px solid var(--button-border-color);
+    cursor: pointer;
+  }
 }
