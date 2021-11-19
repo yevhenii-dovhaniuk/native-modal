@@ -2,7 +2,15 @@ import React, { FunctionComponent, useEffect } from 'react';
 import { RouteObject, useLocation, useNavigate, useRoutes } from 'react-router-dom';
 import App from './App';
 import PageOne from './PageOne/PageOne';
-import PageTwo from './PageTwo/PageTwo';
+import Spinner from './Spinner/Spinner';
+
+const PageTwo = React.lazy(() => new Promise<void>(resolve => {
+    setTimeout(() => {
+      resolve()
+    }, 1000);
+  })
+    .then(() => import('./PageTwo/PageTwo'))
+);
 
 interface RouteObjectWithDisplayName extends RouteObject {
   displayName?: string;
@@ -21,7 +29,7 @@ export const routesConfig: RouteObjectWithDisplayName[] = [
       },
       {
         path: 'page-two',
-        element: <PageTwo/>,
+        element: <React.Suspense fallback={<Spinner size="big"/>}><PageTwo/></React.Suspense>,
         displayName: 'Page Two'
       }
     ]

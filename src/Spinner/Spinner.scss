@@ -1,0 +1,25 @@
+.spinner {
+  --spinner-size: 14px;
+  --spinner-size--big: 28px;
+  --spinner-size--small: 10px;
+
+  animation: spin infinite linear 1s;
+  height: var(--spinner-size);
+  width: var(--spinner-size);
+
+  &--big {
+    height: var(--spinner-size--big);
+    width: var(--spinner-size--big);
+  }
+
+  &--small {
+    height: var(--spinner-size--small);
+    width: var(--spinner-size--small);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
